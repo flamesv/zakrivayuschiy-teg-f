@@ -144,7 +144,6 @@ place-items: center;
 
 .button {
   border: var(--border);
-  padding: 10px 35px;
   transition: 0.3s ease;
   background-color: var(--bg-color);
   position: relative;
@@ -152,6 +151,8 @@ place-items: center;
   font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 90%;
+  min-inline-size: 130px;
+  min-block-size: 38px;
 }
 
 .button__text {
