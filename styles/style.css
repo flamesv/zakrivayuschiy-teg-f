@@ -12,11 +12,11 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
   font-variation-settings: "wght" var(--main-font-weight, 400);
   display: flex;
   flex-direction: column;
-  place-items: center;
+place-items: center;
   background-color: var(--bg-color, #fff);
   background-image: var(--bg-gradient);
   background-size: cover;
@@ -73,8 +73,8 @@
 
 .card__header {
   padding: 5px 24px 4px 10px;
-  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
-  font-variation-settings: 'wght' var(--heading-font-weight, 700);
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
+  font-variation-settings: "wght" var(--heading-font-weight, 700);
   font-size: 18px;
   line-height: normal;
   border-bottom: var(--border);
@@ -106,7 +106,6 @@
     1px 0 var(--stroke-color, #fff), 0 -1px var(--stroke-color, #fff);
 }
 
-
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .image-label {
     -webkit-text-stroke: 1px var(--bg-color);
@@ -116,8 +115,8 @@
 }
 
 .card__content {
-  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
-  font-variation-settings: 'wght' var(--main-font-weight, 400);
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
+  font-variation-settings: "wght" var(--main-font-weight, 400);
   font-size: 18px;
   line-height: 21px;
   padding: 25px;
@@ -191,7 +190,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   transition: transform 0.5s ease-in-out;
@@ -199,7 +198,6 @@
   transform-origin: left;
   background-color: #000;
 }
-
 
 .sparks {
   opacity: 0;
@@ -228,8 +226,7 @@
 .like-icon.is-liked .core,
 .like-icon:active .core,
 .like-icon:active .main-body,
-.like-icon.is-liked .main-body
- {
+.like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
 }
 
@@ -274,7 +271,6 @@
   filter: invert(0.7) blur(4px);
 }
 
-
 .save-dialog[open] {
   background-color: var(--bg-color);
   border: var(--border);
@@ -282,7 +278,7 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px
+  gap: 30px;
 }
 
 .save-dialog::backdrop {
@@ -306,7 +302,6 @@
   min-inline-size: 39px;
   block-size: 39px;
 }
-
 
 @media (width <= 375px) {
   .header {
