@@ -295,7 +295,7 @@ place-items: center;
   font-size: 14px;
   line-height: 1.5em;
   text-transform: uppercase;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, "PressStart2P"), fantasy;
 }
 
 .save-dialog .button__image {
