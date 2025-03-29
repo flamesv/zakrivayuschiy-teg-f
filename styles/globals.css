@@ -21,6 +21,8 @@ h6,
 p,
 ul,
 ol,
+figure,
+figcaption,
 li {
   margin: 0;
   padding: 0;
@@ -50,4 +52,12 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
