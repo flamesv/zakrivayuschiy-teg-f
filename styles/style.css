@@ -36,6 +36,12 @@ place-items: center;
   background-color: var(--bg-color, #fff);
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header_title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
@@ -55,7 +61,7 @@ place-items: center;
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-block-end: 105px;
+  margin-block-end: 50px;
 }
 
 .card {
@@ -138,8 +144,13 @@ place-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s ease;
   height: 100%;
+}
+
+.card__icon-button:focus,
+.card__icon-button:focus-visible {
+  outline: var(--border);
+  outline-offset: -1px;
 }
 
 .button {
@@ -147,7 +158,7 @@ place-items: center;
   transition: 0.3s ease;
   background-color: var(--bg-color);
   position: relative;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy), fantasy;
   font-weight: var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 90%;
@@ -171,6 +182,7 @@ place-items: center;
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-block-end: 55px;
 }
 
 .save-button .button__image {
@@ -205,22 +217,34 @@ place-items: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s backwards;
+  animation: sparks 0.3s linear 0.3s backwards;
 }
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s linear;
 }
 
 .core {
   fill: transparent;
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon:hover .main-body,
 .like-icon:hover .core {
   fill: var(--contour-fill-color);
+}
+
+.like-icon:hover .core {
+  transition-delay: 0;
+}
+
+.like-icon:hover .main-body {
+  transition-delay: 0.05s;
+}
+
+.contour {
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .contour,
@@ -229,10 +253,15 @@ place-items: center;
 .like-icon:active .main-body,
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
+  transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .contour {
   transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .main-body {
+  transition-delay: 0.05s;
 }
 
 .is-liked .heart {
@@ -280,6 +309,10 @@ place-items: center;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.dialog__button-close-text {
+  text-transform: uppercase;
 }
 
 .save-dialog::backdrop {

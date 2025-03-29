@@ -19,7 +19,7 @@
       <h1 class="header_title">&lt;/html&gt;</h1>
       <p class="header_text">закрывающий тег</p>
     </header>
-    <main>
+    <main class="main">
       <ul class="list">
         <li class="list_item">
           <article class="card">
@@ -592,46 +592,44 @@
             </div>
           </article>
         </li>
-
-        <li class="list_item">
-          <button
-            class="button save-button"
-            type="button"
-            onclick="window['save-dialog'].showModal()"
-            aria-controls="save-dialog"
-          >
-            <svg
-              class="button__image"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 40 40"
-            >
-              <use href="./svg/floppy.svg#floppy" />
-            </svg>
-            <span class="button__text">Сохранить на память</span>
-          </button>
-
-          <dialog id="save-dialog" class="save-dialog">
-            <div class="dialog__text-wrapper">
-              <svg
-                class="button__image"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 40 40"
-              >
-                <use href="./svg/floppy.svg#floppy"></use>
-              </svg>
-              <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-            </div>
-            <button
-              aria-controls="save-dialog"
-              class="dialog__button-close button"
-              type="button"
-              onclick="window['save-dialog'].close()"
-            >
-              <span class="dialog__button-close-text button__text">ок</span>
-            </button>
-          </dialog>
-        </li>
       </ul>
+
+      <button
+        class="button save-button"
+        type="button"
+        onclick="window['save-dialog'].showModal()"
+        aria-controls="save-dialog"
+      >
+        <svg
+          class="button__image"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 40 40"
+        >
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+
+      <dialog id="save-dialog" class="save-dialog">
+        <div class="dialog__text-wrapper">
+          <svg
+            class="button__image"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 40 40"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button
+          aria-controls="save-dialog"
+          class="dialog__button-close button"
+          type="button"
+          onclick="window['save-dialog'].close()"
+        >
+          <span class="dialog__button-close-text button__text">ок</span>
+        </button>
+      </dialog>
     </main>
 
     <script src="./scripts/like.js"></script>
